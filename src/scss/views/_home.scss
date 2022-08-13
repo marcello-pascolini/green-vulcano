@@ -1,0 +1,229 @@
+.header{
+    @include flex-center;
+    background-color: #fff;
+    img{
+        padding: 1rem;
+    }
+}
+.main{
+    @include flex-center;
+    
+    width: 100vw;
+    padding: 4rem 0;
+    
+}
+.table-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 75%;
+}
+.table-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+.search-input{
+    @include border-radius;
+    @include box-shadow;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    width: 320px;
+}
+.function-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.add-item-box{
+    padding-right: 30px;
+    border-right: 1px solid rgb(183, 183, 183);
+}
+.add-item-btn{
+    @include border-radius;
+    border: none;
+    outline: none;
+    background-color: $functional-green;
+    color: white;
+    text-transform: uppercase;
+    padding: .6rem 2rem;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.filter-btn{
+    @include border-radius;
+    border: none;
+    outline: none;
+    background-color: $dark-blue;
+    padding: .6rem 1rem;
+}
+
+//table body
+.table{
+    @include border-radius;
+    @include box-shadow;
+    width: 100%;
+    font-weight: 500;
+    overflow: hidden;
+}
+thead{
+    background-color: $table-grey; 
+}
+th{
+    text-align: start;
+    padding: 1.5rem 2rem;
+    font-size: 12px;
+}
+tbody{
+    background-color: #fff;
+    width: 100%;
+   
+}
+td{
+    padding: 1.5rem ;
+    font-size: 12px;
+      
+}
+thead tr::before{
+    height: 0px;
+    content: '';
+}
+
+tbody tr:first-child::before{
+    height: 0px;
+    content: '';
+}
+tbody tr::before{
+    height: 1px;
+    background-color: #00000029;
+    width: 70%;
+    content: '';
+    position: absolute;
+    margin: 0 2rem;
+    
+}
+.center-th{
+    text-align: center
+}
+.center-td{
+    text-align: center;
+}
+.action-td{
+    display: flex;
+    gap: 25px;
+    img{
+        cursor: pointer;
+    }
+}
+.id{
+    color: $id;
+}
+
+.low{
+    color: $low;
+    border-radius: 4px 0px 4px 4px;
+    background-color:  rgba(237, 10, 63, 0.2);
+    text-transform: uppercase;
+    text-align: center;
+    padding: .5rem 1rem;  
+}
+.good{
+    color: $good;
+    border-radius: 4px 0px 4px 4px;
+    background-color:  rgba(39, 182, 146, 0.2);
+    text-transform: uppercase;
+    text-align: center;
+    padding: .5rem 1rem; 
+}
+
+.medium{
+    color: $medium;
+    border-radius: 4px 0px 4px 4px;
+    background-color:  rgba(255, 180, 11, 0.2);
+    text-transform: uppercase;
+    text-align: center;
+    padding: .5rem 1rem;   
+}
+.not-found{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+
+//table footer
+.table-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.download-button{
+    @include border-radius;
+    background-color: $dark-blue;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: .6rem 2rem;
+    font-size: 12px;
+    font-weight: bold;
+}
+.navigation-box{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+.pagination-button{
+    @include border-radius;
+    @include flex-center;
+    background-color: white;
+    padding: .5rem;
+    font-weight: bold;
+    color: $dark-blue;
+    outline: none;
+    font-size: 12px;
+    width: 32px;
+    height: 32px;   
+    
+}
+.active-page{
+
+    @include border-radius;
+    @include flex-center;
+    background-color: $dark-blue;
+    padding: .5rem;
+    font-weight: bold;
+    color: white;
+    outline: none;
+    font-size: 12px;
+    width: 32px;
+    height: 32px;
+}
+.disabled-button{
+    @include border-radius;
+    @include flex-center;
+
+    padding: .5rem;
+    outline: none;
+    font-size: 12px;
+    width: 32px;
+    height: 32px;
+
+    opacity: 0.3;
+    
+}
